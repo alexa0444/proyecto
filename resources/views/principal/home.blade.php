@@ -42,12 +42,15 @@
          
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page"href="{{ route('librosindex.principal') }}">Libros</a>
-                  <a class="nav-link active" aria-current="page"href="{{ route('prestamos.index') }}">Prestamos</a>
-                  <a class="nav-link active" aria-current="page"href="{{ route('estudiantes.index') }}">Estudiantes</a>
+                  <a class="nav-link active" aria-current="page"href="{{ route('librosindex.principal') }}">Control de compras</a>
+                  <a class="nav-link active" aria-current="page"href="{{ route('prestamos.index') }}">Control de usuarios</a>
+                 
       
       
+      <h3>administrador</h3>
+
       
+
                 </div>
               </div>
             </div>
@@ -64,10 +67,11 @@
      
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Solicitar un préstamo</a>
-       
+              <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Lista de tareas</a>
+              <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Calendario</a>
+              <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Compra</a>
   
-  
+  <h3>usuario</h3>
   
             </div>
           </div>
@@ -77,12 +81,7 @@
 
       @endif
 
-      
-  <div class="img">
 
-    <img src="{{ asset('img/fondo1.png') }}"  width="900px" height="900px">
-
-  </div>
   <br>
 <br>
 <br>
