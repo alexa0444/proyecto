@@ -22,6 +22,7 @@
 
 </head>
 
+
 <body>
   @extends('layouts.app')
 @section('content')

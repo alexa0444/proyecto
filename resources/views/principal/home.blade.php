@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="{{ asset('https://i.pinimg.com/564x/34/6a/1f/346a1f4363e1b59f6860fdce6abc1082.jpg') }}">
-    <title>Biblioteca escolar</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/icon.png') }}">
+    <title>TOVO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <style>
@@ -68,7 +68,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Lista de tareas</a>
-              <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Calendario</a>
+              <a class="nav-link active" aria-current="page"href="{{ route('calendario') }}">Calendario</a>
               <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Compra</a>
   
   <h3>usuario</h3>

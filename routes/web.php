@@ -7,6 +7,7 @@ use App\Http\Controllers\EstudiantController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\PrestamoController;
+use App\Http\Controllers\EventoController;
 
 
 
@@ -64,6 +65,15 @@ Route::get('/librostotales', [App\Http\Controllers\LibroController::class, 'libr
 Route::get('/prestamostotales', [App\Http\Controllers\PrestamoController::class, 'prestamosT'])->name('prestamostotales');
 
 Route::get('/prestamos/aceptar/{id}', [App\Http\Controllers\PrestamoController::class, 'aceptar'])->name('prestamos.aceptar');
+
+
+
+Route::get('/calendario', [App\Http\Controllers\EventoController::class, 'index'])->name('calendario');
+Route::get('/calendario/form', [App\Http\Controllers\EventoController::class, 'form'])->name('calendarioform');
+Route::post('/calendario/create', [App\Http\Controllers\EventoController::class, 'create'])->name('calendariocreate');
+Route::get('Evento/details/{id}', [App\Http\Controllers\EventoController::class, 'details'])->name('calendariodetalle');
+Route::get('Evento/index/{month}', [App\Http\Controllers\EventoController::class, 'index_month'])->name('calendariomes');
+Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, 'delete'])->name('eventos.delete');
 
 
 
