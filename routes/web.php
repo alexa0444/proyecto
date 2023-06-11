@@ -76,6 +76,7 @@ Route::get('Evento/index/{month}', [App\Http\Controllers\EventoController::class
 Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, 'delete'])->name('eventos.delete');
 
 
+Route::resource('producto', ProductoController::class);
 
 Auth::routes();
 
@@ -84,3 +85,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
