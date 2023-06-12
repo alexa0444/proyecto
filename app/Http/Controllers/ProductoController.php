@@ -47,6 +47,16 @@ class ProductoController extends Controller
 
         $producto = Producto::create($request->all());
 
+        // Manejo de la imagen
+        if ($request->hasFile('imagen')) {
+            $image = $request->file('imagen');
+            $imageName = $image->getClientOriginalName();
+            $image->storeAs('public/productos', $imageName);
+            $producto->imagen = 'productos/' . $imageName;
+        }
+
+        $producto->save();
+
         return redirect()->route('producto.index')
             ->with('success', 'Producto created successfully.');
     }

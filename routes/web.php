@@ -81,6 +81,10 @@ Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, '
 
 Route::resource('producto', ProductoController::class);
 
+Route::get('/ver', function () {
+    return view('productos');
+});
+
 
 Auth::routes();
 

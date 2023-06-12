@@ -56,7 +56,7 @@
 											<td>{{ $producto->cantidad }}</td>
 
                                             <td>
-                                                <form action="{{ route('productos.destroy',$producto->id) }}" method="POST">
+                                                <form action="{{ route('producto.destroy',$producto->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('producto.show',$producto->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('producto.edit',$producto->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
