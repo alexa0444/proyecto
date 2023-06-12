@@ -2,6 +2,7 @@
 
 @section('template_title')
     Producto
+    
 @endsection
 
 @section('content')

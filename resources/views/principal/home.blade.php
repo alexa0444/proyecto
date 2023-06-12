@@ -10,7 +10,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
 
 
+<style>
 
+  h1{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+  }
+</style>
 
 @if (Auth::check() && Auth::user()->admin == 1)
 <header>
@@ -64,8 +71,75 @@
       </div>
     </div>
   </div>
-  <h3>este es el administrador</h3>
-  <h2>poner en esta parte beneficios de organizacion</h2>
+
+  <div class="container">
+    <br>
+    <center><h1>Beneficios de organizarse</h1></center><br>
+  
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://thumbs.dreamstime.com/b/planungs-und-arbeitsprozessorganisation-136206304.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Conocer las prioridades</h5>
+            <p class="card-text">Sin duda, una de las grandes ventajas de la planificación de tareas es que nos permite saber cuáles son las prioridades y, por tanto, no concentrarnos en algo que no se necesita con urgencia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://seminarioiiuntref.files.wordpress.com/2021/10/lider-oficina-equipo-lider-logro-objetivos-empresa_71003-134.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Aumento de la productividad</h5>
+            <p class="card-text">Dedicándole unos minutos al principio del día u otros pocos a lo largo del día a determinar cuáles son las tareas más importantes, podrás aumentar tu productividad sin incrementar el tiempo trabajado. Y es que no perderás tiempo pensando en qué debes hacer, sino que podrás empezar a tope desde el minuto uno.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://cdn2.hubspot.net/hubfs/2081942/Blog/im%C3%A1genes%20interior%20/2018/Agosto/shutterstock_1091150510.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Más tiempo libre</h5>
+            <p class="card-text">Al aumentar tu productividad acabarás tus tareas antes, por lo que tendrás mucho más tiempo libre. Y eso no solo significa que podrás tomarte descansos durante tu jornada laboral, algo esencial para poder rendir al máximo todo el día.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://cdn.goconqr.com/uploads/media/image/40883238/desktop_2a911b0b-0064-4f34-83a7-1e901a359eca.jpg" class="card-img-top" alt="...">
+         <br>
+         <br>
+         <br>
+          <div class="card-body">
+            <h5 class="card-title">Más motivación</h5>
+            <p class="card-text">Por otro lado, queremos comentar que las listas de tareas tienen el poder de motivarte y mantenerte en marcha. Al tachar lo que está pendiente de tu lista, experimentarás una sensación de logro que te estimulará para completar todas las tareas enumeradas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://www.improma.com/wp-content/uploads/2016/03/organizar-horarios.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://www.cibernos.com/hubfs/photo-1512758017271-d7b84c2113f1.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://recursosparapymes.com/wp-content/uploads/2020/02/como-organizar-tareas.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      
+    </div><br>
+  
+  
+  </div>
 
 </header>
 
@@ -94,7 +168,7 @@
             <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Lista de tareas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="{{ route('producto') }}">Compra</a>
+            <a class="nav-link active" aria-current="page"href="{{ route('producto.index') }}">Compra</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('calendario') }}">Calendario</a>
@@ -129,32 +203,51 @@
 <body>
   <div class="container">
   <br>
-  <center><h2>Beneficios de organizarse</h2></center><br>
+  <center><h1>Beneficios de organizarse</h1></center><br>
 
-  <h4>Conocer las prioridades</h4>
-
-  <p>Sin duda, una de las grandes ventajas de la planificación de tareas es que nos permite saber cuáles son las prioridades y, por tanto, no concentrarnos en algo que no se necesita con urgencia. </p><br>
-  
-  <h4>Aumento de la productividad</h4>
-
-  <p>Dedicándole unos minutos al principio del día u otros pocos a lo largo del día a determinar cuáles son las tareas más importantes, podrás aumentar tu productividad sin incrementar el tiempo trabajado. Y es que no perderás tiempo pensando en qué debes hacer, sino que podrás empezar a tope desde el minuto uno.</p><br>
-
-  <h4>Más tiempo libre</h4>
-
-  <p>Al aumentar tu productividad acabarás tus tareas antes, por lo que tendrás mucho más tiempo libre. Y eso no solo significa que podrás tomarte descansos durante tu jornada laboral, algo esencial para poder rendir al máximo todo el día.</p><br>
-
-  <h4>Más motivación</h4>
-
-  <p>Por otro lado, queremos comentar que las listas de tareas tienen el poder de motivarte y mantenerte en marcha. Al tachar lo que está pendiente de tu lista, experimentarás una sensación de logro que te estimulará para completar todas las tareas enumeradas. </p><br>
-
-  <h4>Menos estrés</h4>
-
-  <p>Por último, queremos comentar que la planificación de tareas puede reducir considerablemente el estrés. Y es que no hay que olvidar que la mayor parte del estrés diario está relacionado con la falta de tiempo. Eso sí, es importante que tengas en cuenta que sobre todo disminuirás los niveles de estrés y ansiedad si incluyes descansos y algunos ejercicios de relajación en tu lista de tareas. </p><br>
-
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="https://thumbs.dreamstime.com/b/planungs-und-arbeitsprozessorganisation-136206304.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Conocer las prioridades</h5>
+          <p class="card-text">Sin duda, una de las grandes ventajas de la planificación de tareas es que nos permite saber cuáles son las prioridades y, por tanto, no concentrarnos en algo que no se necesita con urgencia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://seminarioiiuntref.files.wordpress.com/2021/10/lider-oficina-equipo-lider-logro-objetivos-empresa_71003-134.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Aumento de la productividad</h5>
+          <p class="card-text">Dedicándole unos minutos al principio del día u otros pocos a lo largo del día a determinar cuáles son las tareas más importantes, podrás aumentar tu productividad sin incrementar el tiempo trabajado. Y es que no perderás tiempo pensando en qué debes hacer, sino que podrás empezar a tope desde el minuto uno.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://cdn2.hubspot.net/hubfs/2081942/Blog/im%C3%A1genes%20interior%20/2018/Agosto/shutterstock_1091150510.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Más tiempo libre</h5>
+          <p class="card-text">Al aumentar tu productividad acabarás tus tareas antes, por lo que tendrás mucho más tiempo libre. Y eso no solo significa que podrás tomarte descansos durante tu jornada laboral, algo esencial para poder rendir al máximo todo el día.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://cdn.goconqr.com/uploads/media/image/40883238/desktop_2a911b0b-0064-4f34-83a7-1e901a359eca.jpg" class="card-img-top" alt="...">
+       <br>
+       <br>
+       <br>
+        <div class="card-body">
+          <h5 class="card-title">Más motivación</h5>
+          <p class="card-text">Por otro lado, queremos comentar que las listas de tareas tienen el poder de motivarte y mantenerte en marcha. Al tachar lo que está pendiente de tu lista, experimentarás una sensación de logro que te estimulará para completar todas las tareas enumeradas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <br>
   <br>
-  <br>
-
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card">
@@ -173,6 +266,7 @@
     </div>
     
   </div><br>
+
 
 </div>
 </body>

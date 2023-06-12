@@ -8,6 +8,7 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\EventoController;
+use App\Http\Controllers\ProductoController;
 
 
 
@@ -77,6 +78,7 @@ Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, '
 
 
 Route::resource('producto', ProductoController::class);
+
 
 Auth::routes();
 
