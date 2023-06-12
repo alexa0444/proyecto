@@ -9,6 +9,8 @@ use App\Http\Controllers\LibroController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\ProductoController;
+use App\Models\tareas;
+use App\Http\Controllers\tareaController;
 
 
 
@@ -89,3 +91,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+Route::resource('tareas', tareaController::class);

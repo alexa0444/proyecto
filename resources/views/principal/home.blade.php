@@ -165,7 +165,7 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link active" aria-current="page"href="{{ route('solicitar') }}">Lista de tareas</a>
+            <a class="nav-link active" aria-current="page"href="{{ route('tarea.index') }}">Lista de tareas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('producto.index') }}">Compra</a>
