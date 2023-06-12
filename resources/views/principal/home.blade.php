@@ -40,9 +40,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link active" aria-current="page"href="{{ route('prestamos.index') }}">Control de usuarios</a>
-          </li>
+    
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('librosindex.principal') }}">Control de compras</a>
           </li>
