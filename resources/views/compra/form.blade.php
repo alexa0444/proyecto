@@ -26,6 +26,7 @@
             {{ Form::text('cuenta', $compra->cuenta, ['class' => 'form-control' . ($errors->has('cuenta') ? ' is-invalid' : ''), 'placeholder' => 'Cuenta']) }}
             {!! $errors->first('cuenta', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        
         <div class="form-group">
             {{ Form::label('cedula') }}
             {{ Form::text('cedula', $compra->cedula, ['class' => 'form-control' . ($errors->has('cedula') ? ' is-invalid' : ''), 'placeholder' => 'Cedula']) }}
