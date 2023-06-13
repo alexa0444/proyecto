@@ -53,7 +53,9 @@
               echo '<h5 class="precio">Precio $' . $producto->precio . '</h5>';
               echo '<br>';
               echo '<center>';
-              echo '<a href="'. route('compra.create') .'">';
+                echo '<a href="'. route('compra.create') .'">';
+
+
               echo '<botton class="btn btn-success">COMPRAR</botton>';
               echo '</a>';
               echo '</center>';

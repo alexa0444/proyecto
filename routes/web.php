@@ -74,8 +74,17 @@ Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, '
 Route::resource('producto', ProductoController::class);
 Route::resource('compra', CompraController::class);
 
+
+// Route::get('/compra/crear/{nombre}/{precio}', [App\Http\Controllers\CompraController::class, 'create'])->name('compra.create');
+// Route::post('compra/store', [App\Http\Controllers\CompraController::class, 'store'])->name('compra.store');
+// Route::get('/compra/index}', [App\Http\Controllers\CompraController::class, 'index'])->name('compra.index');
+
+
+
+
 Route::get('/ver', function () {
-    return view('productos');
+    return view
+    ('productos');
 });
 
 
@@ -89,6 +98,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('tareas', tareaController::class);
+
 
 
 Route::get('/tareas', [TareaController::class, 'index'])->name('tareas.index');

@@ -11,10 +11,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property $nombre
  * @property $apellido
  * @property $direccion
+ * @property $producto
  * @property $cantidad_p
  * @property $cuenta
  * @property $cedula
  * @property $correo
+ * @property $total
  * @property $created_at
  * @property $updated_at
  *
@@ -28,10 +30,12 @@ class Compra extends Model
 		'nombre' => 'required',
 		'apellido' => 'required',
 		'direccion' => 'required',
+		'producto' => 'required',
 		'cantidad_p' => 'required',
 		'cuenta' => 'required',
 		'cedula' => 'required',
 		'correo' => 'required',
+		'total' => 'required',
     ];
 
     protected $perPage = 20;
@@ -41,7 +45,7 @@ class Compra extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre','apellido','direccion','cantidad_p','cuenta','cedula','correo'];
+    protected $fillable = ['nombre','apellido','direccion','producto','cantidad_p','cuenta','cedula','correo','total'];
 
 
 

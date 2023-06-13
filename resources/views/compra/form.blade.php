@@ -1,45 +1,81 @@
-<div class="box box-info padding-1">
-    <div class="box-body">
+  <div class="row g-3">
         
-        <div class="form-group">
-            {{ Form::label('nombre') }}
-            {{ Form::text('nombre', $compra->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
-            {!! $errors->first('nombre', '<div class="invalid-feedback">:message</div>') !!}
+    <div class="col-md-6">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="nombre">Nombre</label>
+            <input class="form-control" name="nombre" type="text" id="nombre" fdprocessedid="x13jsl" >
         </div>
-        <div class="form-group">
-            {{ Form::label('apellido') }}
-            {{ Form::text('apellido', $compra->apellido, ['class' => 'form-control' . ($errors->has('apellido') ? ' is-invalid' : ''), 'placeholder' => 'Apellido']) }}
-            {!! $errors->first('apellido', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('direccion') }}
-            {{ Form::text('direccion', $compra->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
-            {!! $errors->first('direccion', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('cantidad_p') }}
-            {{ Form::text('cantidad_p', $compra->cantidad_p, ['class' => 'form-control' . ($errors->has('cantidad_p') ? ' is-invalid' : ''), 'placeholder' => 'Cantidad P']) }}
-            {!! $errors->first('cantidad_p', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('cuenta') }}
-            {{ Form::text('cuenta', $compra->cuenta, ['class' => 'form-control' . ($errors->has('cuenta') ? ' is-invalid' : ''), 'placeholder' => 'Cuenta']) }}
-            {!! $errors->first('cuenta', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        
-        <div class="form-group">
-            {{ Form::label('cedula') }}
-            {{ Form::text('cedula', $compra->cedula, ['class' => 'form-control' . ($errors->has('cedula') ? ' is-invalid' : ''), 'placeholder' => 'Cedula']) }}
-            {!! $errors->first('cedula', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('correo') }}
-            {{ Form::text('correo', $compra->correo, ['class' => 'form-control' . ($errors->has('correo') ? ' is-invalid' : ''), 'placeholder' => 'Correo']) }}
-            {!! $errors->first('correo', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+    </div>
 
+    <div class="col-md-6">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="apellido">Apellido</label>
+            <input class="form-control" name="apellido" type="text" id="apellido" fdprocessedid="m5mfki">
+        </div>
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+
+    <div class="col-md-4">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="direccion">Direccion</label>
+            <input class="form-control" name="direccion" type="text" id="direccion" fdprocessedid="9ozww8">
+        </div>
     </div>
+
+    <div class="col-md-4">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="producto">Producto</label>
+            <input class="form-control" name="producto" type="text" id="producto" fdprocessedid="vvo0zl">
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="cantidad_p">Cantidad </label>
+            <input class="form-control" name="cantidad_p" type="text" id="cantidad_p" fdprocessedid="xinc9s">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="cuenta">Cuenta</label>
+            <input class="form-control" name="cuenta" type="text" id="cuenta" fdprocessedid="ge12ac">
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="cedula">Cedula</label>
+            <input class="form-control" name="cedula" type="text" id="cedula" fdprocessedid="6ouq9s">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="correo">Correo</label>
+            <input class="form-control" name="correo" type="text" id="correo" fdprocessedid="8l3oe5">
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="total">Precio</label>
+            <input class="form-control" name="precio" type="text" id="precio">
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="input-group input-group-lg">
+            <label class="input-group-text" id="inputGroup-sizing-lg" for="total">Total</label>
+            <input class="form-control" name="total" type="text" id="total" fdprocessedid="54p0to">
+        </div>
+    </div>
+
+    <center>
+        <div class="d-grid gap-2">
+            <br>
+            <button type="submit" class="btn btn-primary">{{ __('COMPRAR') }}</button>
+            
+            <br><br>
+        </div>
+        </center>
 </div>

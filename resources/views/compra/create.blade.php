@@ -5,27 +5,15 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+<div class="fondo" style="background: #E3F2FD; margin: 80px; border-radius: 6px;">
+    <br><br><h1 style="text-align: center">Formulario de compra</h1><br><br>
+<div class="container">
+    <form method="POST" action="{{ route('compra.store') }}"  role="form" enctype="multipart/form-data">
+        @csrf
 
-                @includeif('partials.errors')
+        @include('compra.form')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Compra</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('compra.store') }}"  role="form" enctype="multipart/form-data">
-                            @csrf
-
-                            @include('compra.form')
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+    </form>
+</div>
+</div>
 @endsection

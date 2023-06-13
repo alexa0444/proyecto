@@ -43,9 +43,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    
+
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="{{ route('librosindex.principal') }}">Control de compras</a>
+            <a class="nav-link active" aria-current="page"href="{{ route('producto.index') }}">Control de compras</a>
           </li>
         </ul>
       </div>
@@ -171,11 +171,9 @@
           <li class="nav-item active">
             <a class="nav-link active" aria-current="page"href="{{ route('tareas.index') }}">Lista de tareas</a>
           </li>
+         
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="{{ route('producto.index') }}">Compra</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="{{ url('ver') }}">Ver</a>
+            <a class="nav-link active" aria-current="page"href="{{ url('ver') }}">Comprar nuestros productos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('calendario') }}">Calendario</a>

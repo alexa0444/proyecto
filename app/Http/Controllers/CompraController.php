@@ -33,7 +33,10 @@ class CompraController extends Controller
     {
         $compra = new Compra();
         return view('compra.create', compact('compra'));
+
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -47,8 +50,8 @@ class CompraController extends Controller
 
         $compra = Compra::create($request->all());
 
-        return redirect()->route('compra.index')
-            ->with('success', 'Compra created successfully.');
+        return redirect()->route('home');
+       
     }
 
     /**

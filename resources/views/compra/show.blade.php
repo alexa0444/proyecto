@@ -33,6 +33,10 @@
                             {{ $compra->direccion }}
                         </div>
                         <div class="form-group">
+                            <strong>Producto:</strong>
+                            {{ $compra->producto }}
+                        </div>
+                        <div class="form-group">
                             <strong>Cantidad P:</strong>
                             {{ $compra->cantidad_p }}
                         </div>
@@ -47,6 +51,10 @@
                         <div class="form-group">
                             <strong>Correo:</strong>
                             {{ $compra->correo }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Total:</strong>
+                            {{ $compra->total }}
                         </div>
 
                     </div>

@@ -3,26 +3,7 @@
 
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
 
-      <div>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 link-secondary">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+      
       <!-- Right -->
     </section>
     <!-- Section: Social media -->

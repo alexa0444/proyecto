@@ -39,10 +39,12 @@
 										<th>Nombre</th>
 										<th>Apellido</th>
 										<th>Direccion</th>
+										<th>Producto</th>
 										<th>Cantidad P</th>
 										<th>Cuenta</th>
 										<th>Cedula</th>
 										<th>Correo</th>
+										<th>Total</th>
 
                                         <th></th>
                                     </tr>
@@ -55,10 +57,12 @@
 											<td>{{ $compra->nombre }}</td>
 											<td>{{ $compra->apellido }}</td>
 											<td>{{ $compra->direccion }}</td>
+											<td>{{ $compra->producto }}</td>
 											<td>{{ $compra->cantidad_p }}</td>
 											<td>{{ $compra->cuenta }}</td>
 											<td>{{ $compra->cedula }}</td>
 											<td>{{ $compra->correo }}</td>
+											<td>{{ $compra->total }}</td>
 
                                             <td>
                                                 <form action="{{ route('compra.destroy',$compra->id) }}" method="POST">

@@ -18,10 +18,12 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('direccion');
+            $table->string('producto');
             $table->char('cantidad_p');
             $table->string('cuenta', 9);
             $table->string('cedula', 13);
             $table->string('correo');
+            $table->string('total', 8);
             $table->timestamps();
         });
     }
