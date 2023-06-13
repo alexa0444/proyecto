@@ -5,42 +5,60 @@ namespace App\Http\Controllers;
 use App\Models\Tarea;
 use Illuminate\Http\Request;
 
-/**
- * Class TareaController
- * @package App\Http\Controllers
- */
 class TareaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(Request $request)
     {
-        $tareas = Tarea::paginate();
+        $q = $request->input('q');
+        $estado = $request->input('estado');
 
-        return view('tarea.index', compact('tareas'))
+        $query = Tarea::query();
+
+        if ($estado === 'realizadas') {
+            $query->where('estado', 'realizada');
+        } elseif ($estado === 'pendientes') {
+            $query->where('estado', 'pendiente');
+        }
+
+        $tareas = $query->where(function ($query) use ($q) {
+                $query->where('nombre', 'LIKE', '%' . $q . '%')
+                    ->orWhere('materia', 'LIKE', '%' . $q . '%')
+                    ->orWhere('fecha', 'LIKE', '%' . $q . '%');
+            })
+            ->orderBy('fecha', 'desc')
+            ->paginate();
+
+        return view('tarea.index', compact('tareas', 'estado'))
             ->with('i', (request()->input('page', 1) - 1) * $tareas->perPage());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function tareasPendientes(Request $request)
+    {
+        $estado = 'pendientes';
+
+        $tareas = Tarea::where('estado', 'pendiente')->orderBy('fecha', 'desc')->paginate();
+
+        return view('tarea.index', compact('tareas', 'estado'));
+    }
+
+    public function tareasRealizadas(Request $request)
+    {
+        $estado = 'realizadas';
+
+        $tareas = Tarea::where('estado', 'realizada')->orderBy('fecha', 'desc')->paginate();
+
+        return view('tarea.index', compact('tareas', 'estado'));
+    }
+
+ 
+
+
     public function create()
     {
         $tarea = new Tarea();
         return view('tarea.create', compact('tarea'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         request()->validate(Tarea::$rules);
@@ -51,12 +69,6 @@ class TareaController extends Controller
             ->with('success', 'Tarea created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $tarea = Tarea::find($id);
@@ -64,12 +76,6 @@ class TareaController extends Controller
         return view('tarea.show', compact('tarea'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $tarea = Tarea::find($id);
@@ -77,13 +83,6 @@ class TareaController extends Controller
         return view('tarea.edit', compact('tarea'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  Tarea $tarea
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Tarea $tarea)
     {
         request()->validate(Tarea::$rules);
@@ -94,11 +93,6 @@ class TareaController extends Controller
             ->with('success', 'Tarea updated successfully');
     }
 
-    /**
-     * @param int $id
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Exception
-     */
     public function destroy($id)
     {
         $tarea = Tarea::find($id)->delete();
@@ -107,3 +101,4 @@ class TareaController extends Controller
             ->with('success', 'Tarea deleted successfully');
     }
 }
+

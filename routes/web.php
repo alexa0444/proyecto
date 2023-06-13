@@ -7,6 +7,7 @@ use App\Http\Controllers\EstudiantController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\PrestamoController;
+use App\Http\Controllers\CompraController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\ProductoController;
 use App\Models\tareas;
@@ -80,6 +81,11 @@ Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, '
 
 
 Route::resource('producto', ProductoController::class);
+Route::resource('compra', CompraController::class);
+
+Route::get('/ver', function () {
+    return view('productos');
+});
 
 
 Auth::routes();
@@ -92,3 +98,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('tareas', tareaController::class);
+
+
+Route::get('/tareas', [TareaController::class, 'index'])->name('tareas.index');
+Route::get('/tareas/realizadas', [TareaController::class, 'index'])->name('tareas.realizadas')->defaults('estado', 'realizadas');
+Route::get('/tareas/pendientes', [TareaController::class, 'index'])->name('tareas.pendientes')->defaults('estado', 'pendientes');
