@@ -62,15 +62,6 @@ Route::post('/solicitar', [App\Http\Controllers\PrestamoestudiantController::cla
 Auth::routes();
 
 
-Route::resource('libros', LibroController::class);
-Route::resource('prestamos', PrestamoController::class);
-Route::resource('estudiantes', EstudianteController::class);
-Route::get('/librostotales', [App\Http\Controllers\LibroController::class, 'librostotales'])->name('librostotales');
-Route::get('/prestamostotales', [App\Http\Controllers\PrestamoController::class, 'prestamosT'])->name('prestamostotales');
-
-Route::get('/prestamos/aceptar/{id}', [App\Http\Controllers\PrestamoController::class, 'aceptar'])->name('prestamos.aceptar');
-
-
 
 Route::get('/calendario', [App\Http\Controllers\EventoController::class, 'index'])->name('calendario');
 Route::get('/calendario/form', [App\Http\Controllers\EventoController::class, 'form'])->name('calendarioform');

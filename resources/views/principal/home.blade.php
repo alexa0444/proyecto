@@ -19,6 +19,9 @@
   }
 </style>
 
+
+
+
 @if (Auth::check() && Auth::user()->admin == 1)
 <header>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -40,9 +43,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link active" aria-current="page"href="{{ route('prestamos.index') }}">Control de usuarios</a>
-          </li>
+    
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('librosindex.principal') }}">Control de compras</a>
           </li>
@@ -159,7 +160,10 @@
         aria-controls="navbarExample01"
         aria-expanded="false"
         aria-label="Toggle navigation"
+
+      
       >
+
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
@@ -273,6 +277,10 @@
 
 
 </div>
+
+
 </body>
 
 @endif
+
+@include('layouts.footer')

@@ -80,7 +80,9 @@
 
     </div>
 
-    @stack('scripts') <!-- Aquí se incluirán los scripts JavaScript -->
+    @stack('scripts')
+
+    @include('layouts.footer')
 
 </body>
 </html>
