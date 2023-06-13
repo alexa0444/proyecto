@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Productos</title>
+
+    <style>
+        .precio{
+            color: red;
+        }
+
+        .card-title{
+            text-align: center
+        }
+    </style>
+
+    
 </head>
 <body>
     @extends('layouts.app')
@@ -35,7 +47,16 @@
               echo '<div class="card h-100">';
               echo '<img src="' . asset('storage/' . $producto->imagen) . '" class="card-img-top" height="465px" >';
               echo '<div class="card-body">';
-              echo '<h5 class="card-title">' . $producto->nombre . '</h5>';
+              echo '<h4 class="card-title">' . $producto->nombre . '</h4>';
+              echo '<br>';
+              echo '<h5 class="cantidad">Disponibles ' . $producto->cantidad . '</h5>';
+              echo '<h5 class="precio">Precio $' . $producto->precio . '</h5>';
+              echo '<br>';
+              echo '<center>';
+              echo '<a href="'. route('compra.create') .'">';
+              echo '<botton class="btn btn-success">COMPRAR</botton>';
+              echo '</a>';
+              echo '</center>';
               echo '</div>';
               echo '</div>';
               echo '</div>';
