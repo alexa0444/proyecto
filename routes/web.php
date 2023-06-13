@@ -14,6 +14,7 @@ use App\Http\Controllers\tareaController;
 
 
 
+
  
 /*
 |--------------------------------------------------------------------------
@@ -92,3 +93,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('tareas', tareaController::class);
+
+
+Route::get('/tareas', [TareaController::class, 'index'])->name('tareas.index');
+Route::get('/tareas/realizadas', [TareaController::class, 'index'])->name('tareas.realizadas')->defaults('estado', 'realizadas');
+Route::get('/tareas/pendientes', [TareaController::class, 'index'])->name('tareas.pendientes')->defaults('estado', 'pendientes');
