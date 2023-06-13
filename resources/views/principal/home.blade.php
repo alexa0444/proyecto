@@ -171,6 +171,9 @@
             <a class="nav-link active" aria-current="page"href="{{ route('producto.index') }}">Compra</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="{{ url('ver') }}">Ver</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('calendario') }}">Calendario</a>
           </li>
           

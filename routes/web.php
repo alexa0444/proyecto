@@ -7,11 +7,11 @@ use App\Http\Controllers\EstudiantController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\PrestamoController;
+use App\Http\Controllers\CompraController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\ProductoController;
 use App\Models\tareas;
 use App\Http\Controllers\tareaController;
-
 
 
 
@@ -81,6 +81,11 @@ Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, '
 
 
 Route::resource('producto', ProductoController::class);
+Route::resource('compra', CompraController::class);
+
+Route::get('/ver', function () {
+    return view('productos');
+});
 
 
 Auth::routes();
