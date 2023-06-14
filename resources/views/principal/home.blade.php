@@ -173,7 +173,7 @@
           </li>
          
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="{{ url('') }}">Vista semanal</a>
+            <a class="nav-link active" aria-current="page"href="{{ route('vistasemanal') }}">Vista semanal</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('calendario') }}">Calendario</a>

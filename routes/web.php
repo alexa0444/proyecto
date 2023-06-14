@@ -2,14 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\CarouselController;
-use App\Http\Controllers\EstudiantController;
-use App\Http\Controllers\EstudianteController;
-use App\Http\Controllers\LibroController;
-use App\Http\Controllers\PrestamoController;
-use App\Http\Controllers\CompraController;
+use App\Http\Controllers\VistaSController;
 use App\Http\Controllers\EventoController;
-use App\Http\Controllers\ProductoController;
+
 use App\Models\tareas;
 use App\Http\Controllers\tareaController;
 
@@ -54,6 +49,10 @@ Route::get('Evento/details/{id}', [App\Http\Controllers\EventoController::class,
 Route::get('Evento/index/{month}', [App\Http\Controllers\EventoController::class, 'index_month'])->name('calendariomes');
 Route::delete('/eventos/{id}',  [App\Http\Controllers\EventoController::class, 'delete'])->name('eventos.delete');
 
+Route::get('/vista-semanal',[App\Http\Controllers\VistaSController::class, 'vistaSemanal'])->name('vistasemanal');
+Route::post('/agregar-tarea', [App\Http\Controllers\VistaSController::class, 'agregarTarea'])->name('vistasemanal.agregar');
+Route::delete('/vistasemanal/completar/{id}', [VistaSController::class, 'completarTarea'])
+    ->name('vistasemanal.completar');
 
 
 

@@ -28,10 +28,7 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contactos</h6>
             <p><i class="fas fa-home me-3 text-secondary"></i> 8093737234</p>
-            <p>
-              <i class="fas fa-envelope me-3 text-secondary"></i>
-              info@example.com
-            </p>
+           
             <p><i class="fas fa-phone me-3 text-secondary"></i> tovo@gmail.com</p>
            
           </div>
@@ -43,7 +40,7 @@
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(164, 207, 223, 0.701);">
+    <div class="text-center p-4" style="background-color:#E3F2FD;">
      Tareas organizadas, vida ordenada
    
     </div>

@@ -2,31 +2,32 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 /**
- * Class Tarea
+ * Class vistaS
  *
  
  * @property $id
  * @property $nombre
- * @property $materia
  * @property $fecha
- * @property $estado
  * @property $created_at
  * @property $updated_at
  *
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Tarea extends Model
+
+class vistaS extends Model
 {
-    
+  
     static $rules = [
 		'nombre' => 'required',
-		'materia' => 'required',
 		'fecha' => 'required',
-		'estado' => 'required',
+	
     ];
 
     protected $perPage = 20;
@@ -36,8 +37,20 @@ class Tarea extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre','materia','fecha','estado'];
+    protected $fillable = ['nombre','fecha'];
 
 
 
+    // public function scopeFecha($query, $fecha)
+    // {
+    //     return $query->whereDate('fecha', $fecha);
+    // }
+    public function getTareas($fecha)
+    {
+        return DB::table('vista_s')->whereRaw('DATE(fecha) = ?', [$fecha])->get();
+    }
+    
+    
 }
+
+

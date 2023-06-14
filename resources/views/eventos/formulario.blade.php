@@ -1,8 +1,8 @@
 <html>
   <head>
-    @extends('layouts.app')
+    {{-- @extends('layouts.app')
 
-    @section('content')
+    @section('content') --}}
     <title></title>
     <meta content="">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -42,6 +42,10 @@
 <br>
 <br>
     <div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br>
       <div class="card mb-3" style="max-width: 100000px;">
@@ -125,8 +129,8 @@
       <br>
       <br>
     </div>
-    <
     
-@endsection
+    
+{{-- @endsection --}}
   </body>
 </html>
