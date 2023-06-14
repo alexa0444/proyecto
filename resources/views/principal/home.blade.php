@@ -173,7 +173,7 @@
           </li>
          
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="{{ url('ver') }}">Comprar nuestros productos</a>
+            <a class="nav-link active" aria-current="page"href="{{ url('') }}">Vista semanal</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page"href="{{ route('calendario') }}">Calendario</a>

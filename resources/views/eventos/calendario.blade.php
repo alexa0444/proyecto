@@ -1,8 +1,8 @@
 <html>
   <head>
-    @extends('layouts.app')
 
-    @section('content')
+
+
     <title></title>
     <meta content="">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/icon.png') }}">
@@ -103,6 +103,5 @@
 
     </div>
 
-@endsection
   </body>
 </html>
