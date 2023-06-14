@@ -47,7 +47,7 @@
    
       <p class="lead">
       <h1>Calendario de eventos</h1>
-      <a class="btn btn-default"  href="{{ asset('/calendario/form') }}">Crear un evento</a>
+      <a class="btn btn-primary"  href="{{ asset('/calendario/form') }}">Crear un evento</a>
 
 
       <hr>
