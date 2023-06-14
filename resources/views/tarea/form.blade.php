@@ -1,29 +1,41 @@
-<div class="box box-info padding-1">
-    <div class="box-body">
+
+    <div class="row g-3">
+        <center>
         
-        <div class="form-group">
-            {{ Form::label('nombre') }}
-            {{ Form::text('nombre', $tarea->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
-            {!! $errors->first('nombre', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('materia') }}
-            {{ Form::text('materia', $tarea->materia, ['class' => 'form-control' . ($errors->has('materia') ? ' is-invalid' : ''), 'placeholder' => 'Materia']) }}
-            {!! $errors->first('materia', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('fecha') }}
-            {{ Form::text('fecha', $tarea->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : ''), 'placeholder' => 'Fecha']) }}
-            {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('estado') }}
-            {{ Form::text('estado', $tarea->estado, ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : ''), 'placeholder' => 'Estado']) }}
-            {!! $errors->first('estado', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        <div class="col-md-10">
+            <div class="input-group input-group-lg">
+                {{ Form::label('nombre', 'Nombre', ['class' => 'input-group-text custom-class', 'id' => 'inputGroup-sizing-lg'])}}
+                {{ Form::text('nombre', $tarea->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : '')]) }}
+                {!! $errors->first('nombre', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+        </div><br>
+        <div class="col-md-10">
+            <div class="input-group input-group-lg">
+                {{ Form::label('materia', 'Materia', ['class' => 'input-group-text custom-class', 'id' => 'inputGroup-sizing-lg']) }}
+                {{ Form::text('materia', $tarea->materia, ['class' => 'form-control' . ($errors->has('materia') ? ' is-invalid' : '')]) }}
+                {!! $errors->first('materia', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+        </div><br>
+        <div class="col-md-10">
+            <div class="input-group input-group-lg">
+                {{ Form::label('fecha', 'Fecha', ['class' => 'input-group-text custom-class', 'id' => 'inputGroup-sizing-lg']) }}
+                {{ Form::date('fecha', $tarea->fecha, ['class' => 'form-control' . ($errors->has('fecha') ? ' is-invalid' : '')]) }}
+                {!! $errors->first('fecha', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+        </div><br>
+        <div class="col-md-10">
+            <div class="input-group input-group-lg">
+                {{ Form::label('estado', 'Estado', ['class' => 'input-group-text custom-class', 'id' => 'inputGroup-sizing-lg']) }}
+                {{ Form::text('estado', $tarea->estado, ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : '')]) }}
+                {!! $errors->first('estado', '<div class="invalid-feedback">:message</div>') !!}
+            </div>
+        </div><br>
 
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <br>
+        <button type="submit" class="btn btn-primary">{{ __('CREAR') }}</button>
+        <br>
     </div>
-</div>
+
+</center>
