@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+<link rel="icon" type="image/x-icon" href="{{ asset('img/icon.png') }}">
+  
+<title>TOVO</title>
 @section('content')
     <div class="container">
         <div class="row">
@@ -21,8 +23,9 @@
                     </div>
                     <div class="card-body">
                         <div class="mb-3">
+                            <a class="btn btn-primary" href="{{ route('tareas.index') }}">Todas las tareas</a>
                             <a class="btn btn-primary" href="{{ route('tareas.index', ['estado' => 'pendientes']) }}">Tareas Pendientes</a>
-                            <a class="btn btn-primary" href="{{ route('tareas.index', ['estado' => 'realizadas']) }}">Tareas Realizadas</a>
+                            <a class="btn btn-primary" href="{{ route('tareas.index', ['estado' => 'proceso']) }}">Tareas en proceso</a>
                         </div>
                         
                         <table class="table">
@@ -46,11 +49,10 @@
                                         <td>{{ $tarea->estado }}</td>
                                         <td>
                                             <form action="{{ route('tareas.destroy', $tarea->id) }}" method="POST">
-                                                <a class="btn btn-info" href="{{ route('tareas.show', $tarea->id) }}">Mostrar</a>
                                                 <a class="btn btn-primary" href="{{ route('tareas.edit', $tarea->id) }}">Editar</a>
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                <button type="submit" class="btn btn-danger">Marcar tarea como completada</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -64,7 +66,12 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <a class="btn btn-primary"  href="{{ asset('/home') }}">Ir a la página principal</a>
     </div>
+
+    
     <br>
     <br>
     <br>

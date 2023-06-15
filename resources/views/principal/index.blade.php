@@ -104,7 +104,10 @@
         </p>
       </div>
     </div>
+
+    
   </div>
+  <a class="btn btn-primary"  href="{{ asset('/home') }}">Ir a la página principal</a>
 </div>
 </div>
 </body>
@@ -112,7 +115,7 @@
 <br><br><br>
 
 
-   
+
 @endsection
 
 

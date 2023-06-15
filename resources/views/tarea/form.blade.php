@@ -1,4 +1,5 @@
 
+
     <div class="row g-3">
         <center>
         
@@ -26,9 +27,11 @@
         <div class="col-md-10">
             <div class="input-group input-group-lg">
                 {{ Form::label('estado', 'Estado', ['class' => 'input-group-text custom-class', 'id' => 'inputGroup-sizing-lg']) }}
-                {{ Form::text('estado', $tarea->estado, ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : '')]) }}
+                {{ Form::select('estado', ['pendiente' => 'Pendiente', 'proceso' => 'Proceso'], $tarea->estado, ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : '')]) }}
                 {!! $errors->first('estado', '<div class="invalid-feedback">:message</div>') !!}
             </div>
+        </div><br>
+        
         </div><br>
 
     </div>

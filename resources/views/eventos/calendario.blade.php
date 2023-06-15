@@ -15,16 +15,16 @@
     body{
       font-family: 'Exo', sans-serif;
     }
-    .header-col{
-      background: #B3E5FC;
     
+    .header-col{
+      background: rgb(128, 201, 212) ;
       color:#ffffff;
       text-align: center;
       font-size: 20px;
       font-weight: bold;
     }
     .header-calendar{
-      background: #81D4FA  ;
+      background: rgb(128, 201, 212)  ;
       color:rgb(255, 255, 255);
     }
  
@@ -32,10 +32,12 @@
       border:1px solid  #E1F5FE;
       height:150px;
     }
+
+    /* background: rgb(218, 238, 241); */
     .box-dayoff{
       border:1px solid #E3E9E5;
       height:150px;
-      background-color:  #E1F5FE;
+      background-color: rgb(218, 238, 241);
     }
     </style>
 
@@ -47,7 +49,7 @@
    
       <p class="lead">
       <h1>Calendario de eventos</h1>
-      <a class="btn btn-primary"  href="{{ asset('/calendario/form') }}">Crear un evento</a>
+      <a style="background-color: rgb(128, 201, 212); color: white;" class="btn"  href="{{ asset('/calendario/form') }}">Crear un evento</a>
 
 
       <hr>
@@ -74,18 +76,18 @@
         <div class="col header-col">Sábado</div>
         <div class="col header-col">Domingo</div>
       </div>
-      <!-- inicio de semana -->
+ 
       @foreach ($data['calendar'] as $weekdata)
         <div class="row">
-          <!-- ciclo de dia por semana -->
+        
           @foreach  ($weekdata['datos'] as $dayweek)
 
           @if  ($dayweek['mes']==$mes)
             <div class="col box-day">
               {{ $dayweek['dia']  }}
-              <!-- evento -->
+
               @foreach  ($dayweek['evento'] as $event) 
-                  <a class="badge badge-primary" href="{{ asset('/Evento/details/') }}/{{ $event->id }}">
+                  <a style="background-color: rgb(208, 234, 255); color: rgb(0, 0, 0); font-size: 13px;" class="badge badge-primary" href="{{ asset('/Evento/details/') }}/{{ $event->id }}">
                  
                     {{ $event->Nombre }}
                   </a>
@@ -101,7 +103,14 @@
         </div>
       @endforeach
 
+      <br>
+      <br>
+      <a class="btn btn-primary"  href="{{ asset('/home') }}">Ir a la página principal</a>
+      <br>
+      <br>
     </div>
+
+    
 
   </body>
 </html>

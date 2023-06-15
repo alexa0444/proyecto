@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models\vistaS;
 use Carbon\Carbon;
@@ -21,17 +22,21 @@ public function agregarTarea(Request $request)
 {
     $request->validate([
         'fecha' => 'required|date',
+        'hora_inicio' => 'required|date_format:H:i',
+        'hora_fin' => 'required|date_format:H:i|after:hora_inicio',
         'nombre' => 'required|string'
     ]);
 
     vistaS::create([
         'nombre' => $request->nombre,
-        'fecha' => $request->fecha
+        'fecha' => $request->fecha,
+        'hora_inicio' => $request->hora_inicio,
+        'hora_fin' => $request->hora_fin
     ]);
-    
 
     return redirect()->back()->with('success', 'Tarea agregada exitosamente.');
 }
+
 
 
 public function completarTarea($id)

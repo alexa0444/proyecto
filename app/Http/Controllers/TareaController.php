@@ -14,8 +14,8 @@ class TareaController extends Controller
 
         $query = Tarea::query();
 
-        if ($estado === 'realizadas') {
-            $query->where('estado', 'realizada');
+        if ($estado === 'proceso') {
+            $query->where('estado', 'proceso');
         } elseif ($estado === 'pendientes') {
             $query->where('estado', 'pendiente');
         }
@@ -41,11 +41,11 @@ class TareaController extends Controller
         return view('tarea.index', compact('tareas', 'estado'));
     }
 
-    public function tareasRealizadas(Request $request)
+    public function tareasProceso(Request $request)
     {
-        $estado = 'realizadas';
+        $estado = 'Proceso';
 
-        $tareas = Tarea::where('estado', 'realizada')->orderBy('fecha', 'desc')->paginate();
+        $tareas = Tarea::where('estado', 'Proceso')->orderBy('fecha', 'desc')->paginate();
 
         return view('tarea.index', compact('tareas', 'estado'));
     }
